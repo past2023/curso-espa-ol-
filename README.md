@@ -37,16 +37,16 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 
 ## Incluye
 
-- Nueve regiones jugables con paisajes únicos, nuevos NPC, enemigos parlantes y jefes.
+- Doce regiones jugables con paisajes únicos, nuevos NPC, enemigos parlantes y jefes.
 - Diálogos A1 con palabras interactivas, ejemplos y traducción rusa.
-- Diccionario de 10 temas y más de 50 palabras.
+- Diccionario de 12 temas y más de 65 palabras.
 - Combate, esquiva, magia de palabras, maná, monedas y partículas.
-- Misiones, inventario y seis tiendas medievales animadas con pociones, maná y mejoras de espada.
+- Misiones, inventario y ocho tiendas medievales animadas con pociones, maná y mejoras de espada.
 - Creación de héroe y clasificación local por nombre y estadísticas.
 - Guardado automático local y sincronización opcional con el servidor incluido.
 - Ranking global compartido entre todos los jugadores conectados al mismo servidor.
-- Tres etapas de tres regiones, con una prueba animada de diez preguntas al final de cada etapa.
-- Diseño adaptable, efectos sonoros multicapa y nueve canciones dinámicas generadas con Web Audio API.
+- Cuatro etapas de tres regiones, con una prueba animada de diez preguntas al final de cada etapa.
+- Diseño adaptable, efectos sonoros multicapa y doce canciones dinámicas generadas con Web Audio API.
 - Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
 - Globos de cómic A1 para los enemigos durante y después del combate.
 - Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad, clima regional y transiciones.
