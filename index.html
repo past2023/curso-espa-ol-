@@ -9,16 +9,15 @@
 </head>
 <body>
   <main id="game-shell">
-    <header class="topbar">
-      <div class="brand"><span class="brand-gem">◆</span><div><h1>EL HÉROE DE LAS PALABRAS</h1><small>Una aventura en Verbalia</small></div></div>
-      <div class="top-actions">
+    <section id="stage">
+      <canvas id="game" width="960" height="600" aria-label="Mundo de Verbalia"></canvas>
+
+      <div class="top-actions stage-actions">
         <button class="icon-btn" data-open="help" aria-label="Ayuda">?</button>
         <button class="icon-btn" data-open="ranking" aria-label="Clasificación">🏆</button>
         <button class="icon-btn" id="sound-btn" aria-label="Sonido">♪</button>
       </div>
-    </header>
 
-    <section id="game-status" class="hidden" aria-label="Estado del héroe">
       <div id="hud" class="hidden">
         <div class="hud-left panel-chip">
           <div class="avatar">⚔</div>
@@ -33,10 +32,22 @@
       </div>
       <div id="objective" class="hidden"><small>MISIÓN ACTUAL</small><span id="objective-text"></span></div>
       <div id="toast-zone" aria-live="polite"></div>
-    </section>
+      <div id="boss-bar" class="hidden"><strong id="boss-name">Guardián</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
 
-    <section id="stage">
-      <canvas id="game" width="960" height="600" aria-label="Mundo de Verbalia"></canvas>
+      <nav id="game-nav" class="hidden">
+        <button data-open="dictionary"><kbd>D</kbd><span>📖 Diccionario</span></button>
+        <button data-open="inventory"><kbd>I</kbd><span>🎒 Mochila</span></button>
+        <button data-open="journal"><kbd>J</kbd><span>📜 Misiones</span></button>
+        <button data-action="magic"><kbd>Q</kbd><span>✨ Magia</span></button>
+        <div class="control-note">WASD Mover · ESPACIO Atacar · SHIFT Esquivar · E Hablar</div>
+      </nav>
+
+      <div id="dialogue" class="dialogue hidden" role="dialog">
+        <div id="speaker-portrait" class="portrait">🦉</div>
+        <div class="dialogue-body"><div class="speaker-row"><strong id="speaker">Don Diccionario</strong><button id="translate-line">T · Русский</button></div><p id="dialogue-text"></p><p id="dialogue-ru" class="translation hidden"></p><small>Haz clic en las palabras doradas para aprenderlas</small></div>
+        <button id="dialogue-next" class="next">›</button>
+      </div>
+
       <div id="pause" class="screen-card hidden"><h2>PAUSA</h2><p>La aventura te espera.</p><button data-action="resume">Continuar</button><button data-action="save">Guardar partida</button><button data-open="help">Controles</button></div>
 
       <div id="welcome" class="welcome-screen">
@@ -53,25 +64,6 @@
         <div class="owl">🦉<span>¡Hola!</span></div>
       </div>
     </section>
-
-    <section id="scene-bottom" class="hidden" aria-label="Mensajes de combate">
-      <div id="interact-hint" class="hidden"><kbd>E</kbd><span id="interact-text">Hablar</span></div>
-      <div id="boss-bar" class="hidden"><strong id="boss-name">Guardián</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
-    </section>
-
-    <div id="dialogue" class="dialogue hidden" role="dialog">
-      <div id="speaker-portrait" class="portrait">🦉</div>
-      <div class="dialogue-body"><div class="speaker-row"><strong id="speaker">Don Diccionario</strong><button id="translate-line">T · Русский</button></div><p id="dialogue-text"></p><p id="dialogue-ru" class="translation hidden"></p><small>Haz clic en las palabras doradas para aprenderlas</small></div>
-      <button id="dialogue-next" class="next">›</button>
-    </div>
-
-    <nav id="game-nav" class="hidden">
-      <button data-open="dictionary"><kbd>D</kbd><span>📖 Diccionario</span></button>
-      <button data-open="inventory"><kbd>I</kbd><span>🎒 Mochila</span></button>
-      <button data-open="journal"><kbd>J</kbd><span>📜 Misiones</span></button>
-      <button data-action="magic"><kbd>Q</kbd><span>✨ Magia</span></button>
-      <div class="control-note">WASD Mover · ESPACIO Atacar · SHIFT Esquivar · E Hablar</div>
-    </nav>
   </main>
 
   <div id="word-tip" class="word-tip hidden"></div>
