@@ -34,6 +34,7 @@ window.GAME_DATA = {
       {speaker:'Don Diccionario',portrait:'🦉',text:'Busca palabras y ayuda al pueblo. ¡Gracias!',ru:'Ищи слова и помоги деревне. Спасибо!',keys:['gracias']}
     ],
     ana:[{speaker:'Ana',portrait:'A',text:'Hola, héroe. Necesito tres cristales: uno, dos y tres.',ru:'Привет, герой. Мне нужны три кристалла: один, два и три.',keys:['hola','uno','dos','tres']}],
+    anaBrave:[{speaker:'Ana la Valiente',portrait:'A',text:'Hola de nuevo, héroe. Uno, dos y tres: juntos protegemos la aldea.',ru:'Снова привет, герой. Один, два и три: вместе мы защищаем деревню.',keys:['hola','uno','dos','tres']}],
     family:[{speaker:'Pablo',portrait:'P',text:'Mi madre, mi padre y mi hermana viven en esta aldea.',ru:'Мои мама, папа и сестра живут в этой деревне.',keys:['madre','padre','hermana']}],
     shop:[{speaker:'Señor Moneda',portrait:'M',text:'Hola, noble héroe. Mira mi tienda, por favor. Tengo pociones.',ru:'Привет, благородный герой. Посмотри, пожалуйста, мой магазин. У меня есть зелья.',keys:['hola','tienda','por favor']}],
     cook:[{speaker:'Doña Canela',portrait:'C',text:'Valiente héroe, necesito pan, queso y una manzana de color rojo.',ru:'Храбрый герой, мне нужны хлеб, сыр и красное яблоко.',keys:['pan','queso','manzana','rojo']}],
