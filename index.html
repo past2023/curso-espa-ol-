@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="theme-color" content="#17152b">
+  <title>El Héroe de las Palabras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-gem">◆</span><div><h1>EL HÉROE DE LAS PALABRAS</h1><small>Una aventura en Verbalia</small></div></div>
+      <div class="top-actions">
+        <button class="icon-btn" data-open="help" aria-label="Ayuda">?</button>
+        <button class="icon-btn" data-open="ranking" aria-label="Clasificación">🏆</button>
+        <button class="icon-btn" id="sound-btn" aria-label="Sonido">♪</button>
+      </div>
+    </header>
+
+    <section id="stage">
+      <canvas id="game" width="960" height="600" aria-label="Mundo de Verbalia"></canvas>
+      <div id="hud" class="hidden">
+        <div class="hud-left panel-chip">
+          <div class="avatar">⚔</div>
+          <div class="bars">
+            <div class="name-line"><strong id="hud-name">Héroe</strong><span id="level-label">Nv. 1</span></div>
+            <div class="bar hp"><i id="hp-fill"></i><span id="hp-text">100 / 100</span></div>
+            <div class="bar mana"><i id="mana-fill"></i><span id="mana-text">60 / 60</span></div>
+          </div>
+        </div>
+        <div class="hud-center panel-chip"><span class="region-icon">🏡</span><div><strong id="region-name">Pueblo Saludo</strong><small id="region-theme">Saludos e introducciones</small></div></div>
+        <div class="hud-right panel-chip"><span>🪙 <b id="coin-count">0</b></span><span>💎 <b id="word-count">0</b></span></div>
+      </div>
+      <div id="objective" class="hidden"><small>MISIÓN ACTUAL</small><span id="objective-text"></span></div>
+      <div id="toast-zone" aria-live="polite"></div>
+      <div id="interact-hint" class="hidden"><kbd>E</kbd><span id="interact-text">Hablar</span></div>
+      <div id="boss-bar" class="hidden"><strong id="boss-name">Guardián</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
+      <div id="pause" class="screen-card hidden"><h2>PAUSA</h2><p>La aventura te espera.</p><button data-action="resume">Continuar</button><button data-action="save">Guardar partida</button><button data-open="help">Controles</button></div>
+
+      <div id="welcome" class="welcome-screen">
+        <div class="book-emblem"><span>EL GRAN</span><b>Ñ</b><span>DICCIONARIO</span></div>
+        <div class="welcome-copy"><p class="eyebrow">UNA AVENTURA DE ESPAÑOL</p><h2>El Héroe de<br><em>las Palabras</em></h2><p>El reino de Verbalia ha perdido sus palabras.<br>Aprende español, domina su magia y derrota a Olvido.</p>
+          <div id="profile-create">
+            <label for="hero-name">¿Cómo te llamas? <small>Как тебя зовут?</small></label>
+            <input id="hero-name" maxlength="14" autocomplete="off" placeholder="Tu nombre…">
+            <div class="hero-choice" aria-label="Elige tu héroe"><button class="hero-option selected" data-color="#52d6ff">🧙</button><button class="hero-option" data-color="#f071b5">🧝</button><button class="hero-option" data-color="#f6bd4b">🥷</button></div>
+          </div>
+          <button id="start-btn" class="primary">COMENZAR AVENTURA <span>›</span></button>
+          <button id="continue-btn" class="secondary hidden">CONTINUAR PARTIDA</button>
+        </div>
+        <div class="owl">🦉<span>¡Hola!</span></div>
+      </div>
+    </section>
+
+    <nav id="game-nav" class="hidden">
+      <button data-open="dictionary"><kbd>D</kbd><span>📖 Diccionario</span></button>
+      <button data-open="inventory"><kbd>I</kbd><span>🎒 Mochila</span></button>
+      <button data-open="journal"><kbd>J</kbd><span>📜 Misiones</span></button>
+      <button data-action="magic"><kbd>Q</kbd><span>✨ Magia</span></button>
+      <div class="control-note">WASD Mover · ESPACIO Atacar · SHIFT Rodar · E Hablar</div>
+    </nav>
+  </main>
+
+  <div id="dialogue" class="dialogue hidden" role="dialog">
+    <div id="speaker-portrait" class="portrait">🦉</div>
+    <div class="dialogue-body"><div class="speaker-row"><strong id="speaker">Don Diccionario</strong><button id="translate-line">T · Русский</button></div><p id="dialogue-text"></p><p id="dialogue-ru" class="translation hidden"></p><small>Haz clic en las palabras doradas para aprenderlas</small></div>
+    <button id="dialogue-next" class="next">›</button>
+  </div>
+  <div id="word-tip" class="word-tip hidden"></div>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <section id="modal" class="modal" role="dialog" aria-modal="true">
+      <header><div><p id="modal-kicker"></p><h2 id="modal-title"></h2></div><button id="modal-close" aria-label="Cerrar">×</button></header>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
