@@ -5,7 +5,7 @@
   "description": "RPG educativo de español A1 con guardado y ranking global",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check main.js && node --check data.js && node --check server.js"
+    "check": "node --check main.js && node --check data.js && node --check server.js && node validate-content.js"
   },
   "engines": { "node": ">=18" }
 }

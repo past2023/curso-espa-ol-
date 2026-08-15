@@ -49,7 +49,8 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - Diseño adaptable, efectos sonoros multicapa y nueve canciones dinámicas generadas con Web Audio API.
 - Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
 - Globos de cómic A1 para los enemigos durante y después del combate.
-- Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad y transiciones.
+- Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad, clima regional y transiciones.
+- Textos educativos revisados en español y ruso, con ejemplos naturales de nivel A1.
 - Efectos de combate: sacudida, destello, pausa de impacto, daño flotante, estelas y polvo.
 - Diálogos en un panel propio debajo del área de juego, sin cubrir el HUD ni la acción.
 
