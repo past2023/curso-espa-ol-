@@ -29,14 +29,16 @@ Visita `http://localhost:8000`.
 
 ## Incluye
 
-- Tres regiones jugables con ambientación, NPC, enemigos y jefe.
+- Nueve regiones jugables con paisajes únicos, nuevos NPC, enemigos parlantes y jefes.
 - Diálogos A1 con palabras interactivas, ejemplos y traducción rusa.
 - Diccionario de 10 temas y más de 50 palabras.
 - Combate, esquiva, magia de palabras, maná, monedas y partículas.
 - Misiones, inventario, tienda, pociones y mejora de espada.
 - Creación de héroe y clasificación local por nombre y estadísticas.
 - Guardado automático de posición, progreso, palabras, objetos y jefes en `localStorage`.
-- Diseño adaptable, efectos sonoros multicapa y tres canciones dinámicas generadas con Web Audio API.
+- Diseño adaptable, efectos sonoros multicapa y nueve canciones dinámicas generadas con Web Audio API.
+- Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
+- Globos de cómic A1 para los enemigos durante y después del combate.
 - Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad y transiciones.
 - Efectos de combate: sacudida, destello, pausa de impacto, daño flotante, estelas y polvo.
 - Diálogos en un panel propio debajo del área de juego, sin cubrir el HUD ni la acción.
