@@ -45,7 +45,7 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - Creación de héroe y clasificación local por nombre y estadísticas.
 - Guardado automático local y sincronización opcional con el servidor incluido.
 - Ranking global compartido entre todos los jugadores conectados al mismo servidor.
-- Tres etapas de tres regiones, con una prueba animada de seis preguntas al final de cada etapa.
+- Tres etapas de tres regiones, con una prueba animada de diez preguntas al final de cada etapa.
 - Diseño adaptable, efectos sonoros multicapa y nueve canciones dinámicas generadas con Web Audio API.
 - Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
 - Globos de cómic A1 para los enemigos durante y después del combate.
