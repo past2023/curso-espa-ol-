@@ -36,7 +36,10 @@ Visita `http://localhost:8000`.
 - Misiones, inventario, tienda, pociones y mejora de espada.
 - Creación de héroe y clasificación local por nombre y estadísticas.
 - Guardado automático de posición, progreso, palabras, objetos y jefes en `localStorage`.
-- Diseño adaptable y sonidos generados con Web Audio API.
+- Diseño adaptable, efectos sonoros multicapa y tres canciones dinámicas generadas con Web Audio API.
+- Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad y transiciones.
+- Efectos de combate: sacudida, destello, pausa de impacto, daño flotante, estelas y polvo.
+- Diálogos en un panel propio debajo del área de juego, sin cubrir el HUD ni la acción.
 
 ## Archivos
 

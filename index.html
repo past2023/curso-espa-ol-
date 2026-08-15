@@ -53,6 +53,12 @@
       </div>
     </section>
 
+    <div id="dialogue" class="dialogue hidden" role="dialog">
+      <div id="speaker-portrait" class="portrait">🦉</div>
+      <div class="dialogue-body"><div class="speaker-row"><strong id="speaker">Don Diccionario</strong><button id="translate-line">T · Русский</button></div><p id="dialogue-text"></p><p id="dialogue-ru" class="translation hidden"></p><small>Haz clic en las palabras doradas para aprenderlas</small></div>
+      <button id="dialogue-next" class="next">›</button>
+    </div>
+
     <nav id="game-nav" class="hidden">
       <button data-open="dictionary"><kbd>D</kbd><span>📖 Diccionario</span></button>
       <button data-open="inventory"><kbd>I</kbd><span>🎒 Mochila</span></button>
@@ -62,11 +68,6 @@
     </nav>
   </main>
 
-  <div id="dialogue" class="dialogue hidden" role="dialog">
-    <div id="speaker-portrait" class="portrait">🦉</div>
-    <div class="dialogue-body"><div class="speaker-row"><strong id="speaker">Don Diccionario</strong><button id="translate-line">T · Русский</button></div><p id="dialogue-text"></p><p id="dialogue-ru" class="translation hidden"></p><small>Haz clic en las palabras doradas para aprenderlas</small></div>
-    <button id="dialogue-next" class="next">›</button>
-  </div>
   <div id="word-tip" class="word-tip hidden"></div>
 
   <div id="modal-backdrop" class="modal-backdrop hidden">
