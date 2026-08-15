@@ -41,7 +41,7 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - Diálogos A1 con palabras interactivas, ejemplos y traducción rusa.
 - Diccionario de 10 temas y más de 50 palabras.
 - Combate, esquiva, magia de palabras, maná, monedas y partículas.
-- Misiones, inventario y una tienda medieval animada con pociones, maná y mejoras de espada.
+- Misiones, inventario y seis tiendas medievales animadas con pociones, maná y mejoras de espada.
 - Creación de héroe y clasificación local por nombre y estadísticas.
 - Guardado automático local y sincronización opcional con el servidor incluido.
 - Ranking global compartido entre todos los jugadores conectados al mismo servidor.
