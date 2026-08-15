@@ -12,6 +12,14 @@ python3 -m http.server 8000
 
 Visita `http://localhost:8000`.
 
+Para activar el **guardado en servidor y ranking global**, usa el servidor Node incluido:
+
+```bash
+npm start
+```
+
+No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto) y guarda las partidas en `.server-data/players.json`. En producción conviene montar esa carpeta en un volumen persistente, o definir `VERBALIA_DATA_FILE=/ruta/persistente/players.json`. Un alojamiento puramente estático no puede compartir partidas entre jugadores; debe ejecutar `server.js`.
+
 ## Controles
 
 | Acción | Tecla |
@@ -35,7 +43,9 @@ Visita `http://localhost:8000`.
 - Combate, esquiva, magia de palabras, maná, monedas y partículas.
 - Misiones, inventario, tienda, pociones y mejora de espada.
 - Creación de héroe y clasificación local por nombre y estadísticas.
-- Guardado automático de posición, progreso, palabras, objetos y jefes en `localStorage`.
+- Guardado automático local y sincronización opcional con el servidor incluido.
+- Ranking global compartido entre todos los jugadores conectados al mismo servidor.
+- Tres etapas de tres regiones, con una prueba animada de español al final de cada etapa.
 - Diseño adaptable, efectos sonoros multicapa y nueve canciones dinámicas generadas con Web Audio API.
 - Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
 - Globos de cómic A1 para los enemigos durante y después del combate.

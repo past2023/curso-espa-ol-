@@ -1,0 +1,11 @@
+{
+  "name": "el-heroe-de-las-palabras",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RPG educativo de español A1 con guardado y ranking global",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check main.js && node --check data.js && node --check server.js"
+  },
+  "engines": { "node": ">=18" }
+}
