@@ -52,7 +52,7 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad, clima regional y transiciones.
 - Textos educativos revisados en español y ruso, con ejemplos naturales de nivel A1.
 - Efectos de combate: sacudida, destello, pausa de impacto, daño flotante, estelas y polvo.
-- Diálogos en un panel propio debajo del área de juego, sin cubrir el HUD ni la acción.
+- HUD, mensajes de combate, navegación y diálogos en paneles externos: ningún menú tapa el escenario.
 
 ## Archivos
 

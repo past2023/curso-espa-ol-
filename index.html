@@ -18,8 +18,7 @@
       </div>
     </header>
 
-    <section id="stage">
-      <canvas id="game" width="960" height="600" aria-label="Mundo de Verbalia"></canvas>
+    <section id="game-status" class="hidden" aria-label="Estado del héroe">
       <div id="hud" class="hidden">
         <div class="hud-left panel-chip">
           <div class="avatar">⚔</div>
@@ -34,8 +33,10 @@
       </div>
       <div id="objective" class="hidden"><small>MISIÓN ACTUAL</small><span id="objective-text"></span></div>
       <div id="toast-zone" aria-live="polite"></div>
-      <div id="interact-hint" class="hidden"><kbd>E</kbd><span id="interact-text">Hablar</span></div>
-      <div id="boss-bar" class="hidden"><strong id="boss-name">Guardián</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
+    </section>
+
+    <section id="stage">
+      <canvas id="game" width="960" height="600" aria-label="Mundo de Verbalia"></canvas>
       <div id="pause" class="screen-card hidden"><h2>PAUSA</h2><p>La aventura te espera.</p><button data-action="resume">Continuar</button><button data-action="save">Guardar partida</button><button data-open="help">Controles</button></div>
 
       <div id="welcome" class="welcome-screen">
@@ -51,6 +52,11 @@
         </div>
         <div class="owl">🦉<span>¡Hola!</span></div>
       </div>
+    </section>
+
+    <section id="scene-bottom" class="hidden" aria-label="Mensajes de combate">
+      <div id="interact-hint" class="hidden"><kbd>E</kbd><span id="interact-text">Hablar</span></div>
+      <div id="boss-bar" class="hidden"><strong id="boss-name">Guardián</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
     </section>
 
     <div id="dialogue" class="dialogue hidden" role="dialog">
