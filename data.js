@@ -50,7 +50,12 @@ window.GAME_DATA = {
     guide:[{speaker:'Sir Camino',portrait:'G',text:'Ve a la derecha. La torre está arriba. La tienda está a la izquierda.',ru:'Иди направо. Башня находится наверху. Магазин находится слева.',keys:['derecha','arriba','tienda','izquierda']}],
     mage:[{speaker:'Merlín de las Palabras',portrait:'Ñ',text:'Para abrir el castillo, debes hablar con el guardián, ver la señal y ayudar al mago.',ru:'Чтобы открыть замок, нужно поговорить со стражем, увидеть знак и помочь магу.',keys:['abrir','hablar','ver','ayudar']}]
   },
-  items:{potion:{name:'Poción de vida',ru:'Зелье здоровья',icon:'🧪',price:12},mana:{name:'Agua mágica',ru:'Волшебная вода',icon:'💧',price:10},sword:{name:'Espada brillante',ru:'Сияющий меч',icon:'🗡️',price:30},hint:{name:'Pista de palabra',ru:'Подсказка слова',icon:'🔍',price:15}}
+  items:{
+    potion:{name:'Poción de vida',ru:'Зелье здоровья',icon:'🧪',price:12,desc:'Recupera 45 puntos de vida.',descRu:'Восстанавливает 45 единиц здоровья.'},
+    mana:{name:'Agua mágica',ru:'Волшебная вода',icon:'💧',price:10,desc:'Recupera 35 puntos de maná.',descRu:'Восстанавливает 35 единиц маны.'},
+    sword:{name:'Espada brillante',ru:'Сияющий меч',icon:'🗡️',price:30,desc:'Aumenta el daño de tu espada.',descRu:'Увеличивает урон меча.'},
+    hint:{name:'Pista de palabra',ru:'Подсказка для слова',icon:'🔍',price:15,desc:'Descubre una palabra desconocida.',descRu:'Открывает одно неизвестное слово.'}
+  }
 };
 // Normaliza las listas compactas a objetos con identificadores estables.
 GAME_DATA.themes.forEach(theme=>theme.words=theme.words.map((w,i)=>({id:`${theme.id}_${i}`,es:w[0],ru:w[1],icon:w[2],example:w[3],theme:theme.id})));
