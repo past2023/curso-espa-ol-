@@ -62,7 +62,3 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - `main.js`: motor, renderizado, combate, menús y persistencia.
 
 El contenido educativo está centralizado en `data.js` para facilitar futuras regiones y lecciones.
-
-## Arte y licencias
-
-El mundo usa un sistema híbrido: sprites PNG para terrenos, agua, árboles, personajes y mampostería, combinados con iluminación, clima y partículas procedurales de Canvas. Los sprites incluidos en `assets/kenney/` proceden de **Kenney RPG Base**, **Tiny Town** y **Tiny Dungeon**, publicados bajo licencia **CC0 1.0**. Cada carpeta conserva su archivo `LICENSE.txt` original.
