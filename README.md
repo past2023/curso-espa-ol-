@@ -46,7 +46,7 @@ No requiere instalar dependencias. El servidor escucha `PORT` (8000 por defecto)
 - Guardado automático local y sincronización opcional con el servidor incluido.
 - Ranking global compartido entre todos los jugadores conectados al mismo servidor.
 - Cuatro etapas de tres regiones, con una prueba animada de diez preguntas al final de cada etapa.
-- Diseño adaptable, efectos sonoros multicapa y doce canciones dinámicas generadas con Web Audio API.
+- Diseño a pantalla completa adaptable a Safari y Chrome, efectos sonoros multicapa y doce canciones dinámicas.
 - Recompensas por aprender frases y monedas físicas que vuelan magnéticamente hacia el héroe.
 - Globos de cómic A1 para los enemigos durante y después del combate.
 - Escenarios pixel-art dibujados en Canvas con agua animada, vegetación, partículas, profundidad, clima regional y transiciones.

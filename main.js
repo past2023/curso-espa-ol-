@@ -100,7 +100,7 @@ function spawnRegion(){
  const foe=(x,y,opt={})=>{if(!(opt.boss&&state.bosses.includes(r)))entities.push(new Enemy(x,y,opt))};
  const npc=(x,y,id,name,mark,color)=>entities.push(new NPC(x,y,id,name,mark,color));
  if(r===0){npc(430,235,'owl','Don Diccionario','D','#76518e');npc(700,370,'shop','Señor Moneda','M','#ac653c');foe(805,180);foe(730,500);foe(560,445)}
- if(r===1){npc(170,200,'ana','Ana','A','#d9788c');npc(825,250,'shopForest','Mercader Real','M','#a86b3d');foe(370,180);foe(620,270,{weak:'uno'});foe(780,470,{weak:'dos'});foe(430,480)}
+ if(r===1){npc(170,200,'ana','Ana','A','#d9788c');npc(120,455,'shopForest','Mercader Real','M','#a86b3d');foe(370,180);foe(620,270,{weak:'uno'});foe(780,470,{weak:'dos'});foe(430,480)}
  if(r===2){npc(180,370,'family','Pablo','P','#4b82b4');npc(785,360,'anaBrave','Ana la Valiente','A','#c9637e');foe(470,190);foe(710,170);foe(720,420);foe(520,360,{r:33,hp:220,maxHp:220,speed:32,damageVal:16,color:'#484157',name:'Guardián Gris',weak:'luz',boss:true})}
  if(r===3){npc(190,205,'cook','Doña Canela','C','#b95b4c');npc(720,390,'baker','Maese Trigo','T','#cf8e3e');npc(865,300,'shopFood','Mercader Azafrán','A','#b77b3f');foe(390,190,{color:'#6e4936',name:'Duende Hambriento',weak:'fuego'});foe(610,470,{color:'#754b38',name:'Duende Hambriento',weak:'pan'});foe(820,190,{color:'#6b3e46',name:'Sombra de Sal'});foe(505,275,{r:29,hp:175,maxHp:175,color:'#9a523b',name:'Caballero del Horno',weak:'agua',boss:true})}
  if(r===4){npc(165,310,'ranger','Luna','L','#477c64');npc(760,180,'druid','Roble','R','#5b7041');foe(360,180,{color:'#315f4b',name:'Lobo de Tinta',speed:62});foe(570,450,{color:'#3e674b',name:'Lobo de Tinta',speed:62});foe(820,420,{color:'#465c3d',name:'Espíritu Salvaje',weak:'luz'});foe(610,210,{r:30,hp:190,maxHp:190,color:'#244c3c',name:'Rey de las Bestias',weak:'fuego',boss:true})}
@@ -148,9 +148,9 @@ function drawWorld(t){
   drawPath([[0,335],[250,335],[480,300],[710,350],[960,330]],62,'#806646');
   drawPond(810,170,time);
   [[35,120],[115,180],[220,105],[335,160],[470,115],[605,160],[715,105],[910,120],[55,530],[165,485],[290,555],[430,500],[585,545],[735,510],[900,535]].forEach(p=>drawTree(...p));
-  [[275,190],[520,420],[860,390],[110,375]].forEach((p,i)=>drawRock(p[0],p[1],i%2));
+  [[275,190],[520,420],[860,390],[245,405]].forEach((p,i)=>drawRock(p[0],p[1],i%2));
   [[260,410,2],[500,180,0],[675,450,1],[865,260,3]].forEach(p=>drawFlowers(...p));
-  drawBridge(760,190);drawSign(170,310,'1 · 2 · 3');
+  drawMarket(55,400,'#7e5a93');drawBridge(760,190);drawSign(170,310,'1 · 2 · 3');
  }
  if(state.region===2){
   drawPath([[0,335],[260,335],[480,360],[700,330],[960,335]],64,'#a8845c');
@@ -289,7 +289,8 @@ function drawCastle(x,y){
 function drawCrop(x,y,color){for(let i=0;i<4;i++){ctx.fillStyle='#42733b';ctx.fillRect(x+i*9,y,3,24);pxCircle(x+i*9,y+2,5,color);pxCircle(x+i*9-3,y+8,4,color)}}
 function drawFruitTree(x,y){drawTree(x,y);for(let i=0;i<5;i++)pxCircle(x-19+i*9,y-18+(i%2)*12,4,i%2?'#d94d45':'#f2c34e')}
 function drawAncientTree(x,y){ctx.save();ctx.scale(1.18,1.18);drawTree(x/1.18,y/1.18);ctx.restore();ctx.fillStyle='#9ce884';ctx.fillRect(x-25,y+20,4,9);ctx.fillRect(x+20,y+17,4,12)}
-function drawMarket(x,y,color){ctx.fillStyle='#60432e';ctx.fillRect(x,y,120,56);for(let i=0;i<5;i++){ctx.fillStyle=i%2?color:'#f3d58a';ctx.fillRect(x+i*24,y-20,24,25)}ctx.fillStyle='#362c35';ctx.fillRect(x+8,y+28,104,9);ctx.fillStyle='#f3cb58';ctx.beginPath();ctx.arc(x+25,y+23,6,0,7);ctx.arc(x+45,y+23,6,0,7);ctx.fill()}
+function drawMarket(x,y,color){ctx.save();ctx.fillStyle='#13151c55';ctx.beginPath();ctx.ellipse(x+62,y+57,72,14,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#573b2c';ctx.fillRect(x+2,y-18,7,76);ctx.fillRect(x+111,y-18,7,76);ctx.fillStyle='#7b5536';ctx.fillRect(x,y+33,120,24);ctx.fillStyle='#a27345';ctx.fillRect(x+4,y+37,112,8);ctx.fillStyle='#432f2a';ctx.fillRect(x-4,y+27,128,8);for(let i=0;i<6;i++){ctx.fillStyle=i%2?color:'#f0d186';ctx.beginPath();ctx.moveTo(x+i*20,y-23);ctx.lineTo(x+(i+1)*20,y-23);ctx.lineTo(x+(i+1)*20-3,y+3);ctx.quadraticCurveTo(x+i*20+10,y+11,x+i*20+3,y+3);ctx.fill()}ctx.fillStyle='#34283a';ctx.fillRect(x-3,y-27,126,6);ctx.fillStyle='#f1c85d';ctx.fillRect(x+39,y-18,42,14);ctx.fillStyle='#61422f';ctx.font='bold 8px monospace';ctx.textAlign='center';ctx.fillText('TIENDA',x+60,y-8);ctx.textAlign='left';// cajas, frascos y mercancía
+ for(let i=0;i<4;i++){ctx.fillStyle=['#e1b751','#c76554','#68a77c','#7794bd'][i];pxCircle(x+18+i*25,y+25,6,'#d7ad53');ctx.fillRect(x+14+i*25,y+17,8,9)}ctx.fillStyle='#68462f';ctx.fillRect(x+8,y+48,27,15);ctx.strokeStyle='#ac7746';ctx.strokeRect(x+8,y+48,27,15);ctx.fillStyle='#d9c089';ctx.fillRect(x+90,y+43,19,20);ctx.strokeRect(x+90,y+43,19,20);ctx.restore()}
 function drawRuins(x,y){ctx.fillStyle='#404b47aa';ctx.fillRect(x-80,y+35,165,22);for(let i=0;i<4;i++){ctx.fillStyle='#7d8c78';ctx.fillRect(x-68+i*43,y-15+(i%2)*12,22,55);ctx.fillStyle='#a0a98e';ctx.fillRect(x-72+i*43,y-18+(i%2)*12,30,8)}ctx.fillStyle='#4c7053';ctx.fillRect(x-78,y+31,150,5)}
 function drawMountains(){ctx.fillStyle='#52646d';ctx.beginPath();ctx.moveTo(0,245);ctx.lineTo(150,85);ctx.lineTo(300,245);ctx.lineTo(470,70);ctx.lineTo(670,245);ctx.lineTo(820,95);ctx.lineTo(960,235);ctx.lineTo(960,80);ctx.lineTo(0,80);ctx.fill();ctx.fillStyle='#dce9e7';for(const [x,y] of [[150,85],[470,70],[820,95]]){ctx.beginPath();ctx.moveTo(x-45,y+48);ctx.lineTo(x,y);ctx.lineTo(x+45,y+48);ctx.lineTo(x+14,y+36);ctx.lineTo(x,y+48);ctx.lineTo(x-12,y+32);ctx.fill()}}
 function drawTower(x,y,color){
