@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="theme-color" content="#101629">
+  <title>Crónicas de Valdoria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-frame">
+    <canvas id="game" width="960" height="540" aria-label="Crónicas de Valdoria"></canvas>
+
+    <section id="hud" class="hidden">
+      <div class="hero-card"><span class="hero-face">⚔</span><div><strong id="hero-name">Aren</strong><div class="bar health"><i id="health-fill"></i><b id="health-text">100 / 100</b></div><div class="bar energy"><i id="energy-fill"></i></div></div></div>
+      <div class="zone-card"><small id="chapter">CAPÍTULO I</small><strong id="zone-name">Villa Roble</strong><span id="quest-short">Habla con la guardiana</span></div>
+      <div class="loot-card"><span>🪙 <b id="coins">0</b></span><span>💎 <b id="crystals">0/3</b></span><button id="sound" aria-label="Sonido">♫</button></div>
+    </section>
+
+    <div id="boss-hud" class="hidden"><strong id="boss-title">Señor de la Cripta</strong><div class="bar boss"><i id="boss-fill"></i></div></div>
+    <div id="notice-zone"></div>
+
+    <section id="dialogue" class="hidden">
+      <div id="portrait" class="portrait">🛡️</div>
+      <div><strong id="speaker">Lina</strong><p id="line">Hola, héroe.</p></div>
+      <button id="dialogue-next">›</button>
+    </section>
+
+    <nav id="action-bar" class="hidden">
+      <button data-panel="quest"><kbd>J</kbd><span>📜 Misión</span></button>
+      <button data-panel="inventory"><kbd>I</kbd><span>🎒 Mochila</span></button>
+      <button data-panel="map"><kbd>M</kbd><span>🗺️ Mapa</span></button>
+      <div><kbd>WASD</kbd> Mover · <kbd>ESPACIO</kbd> Atacar · <kbd>SHIFT</kbd> Rodar · <kbd>E</kbd> Hablar</div>
+    </nav>
+
+    <section id="start-screen">
+      <div class="title-seal">V</div>
+      <p class="eyebrow">UNA AVENTURA DE FANTASÍA</p>
+      <h1>Crónicas de<br><em>Valdoria</em></h1>
+      <p>La Sombra ha robado los tres cristales del valle.<br>Explora, lucha y abre la antigua cripta.</p>
+      <label>Nombre del héroe</label>
+      <input id="name-input" maxlength="14" value="Aren" autocomplete="off">
+      <button id="start">COMENZAR AVENTURA</button>
+      <button id="continue" class="hidden">CONTINUAR PARTIDA</button>
+      <small>WASD / Flechas · Espacio · Shift · E</small>
+    </section>
+
+    <section id="panel-backdrop" class="hidden">
+      <div id="panel">
+        <header><div><small id="panel-kicker">DIARIO</small><h2 id="panel-title">Misión</h2></div><button id="panel-close">×</button></header>
+        <div id="panel-content"></div>
+      </div>
+    </section>
+
+    <section id="victory" class="hidden"><div>🏆</div><h2>¡Victoria!</h2><p>La luz vuelve a Valdoria.</p><button id="victory-close">Seguir explorando</button></section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

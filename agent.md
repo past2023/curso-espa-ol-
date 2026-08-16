@@ -739,3 +739,21 @@ git diff --check
 10. Añadir tests automatizados de estado, combate y guardado.
 
 Mantener siempre como prioridad que aprender español sea parte de la aventura, no un menú separado del juego.
+
+---
+
+## 19. Prototipo independiente `heroe2/`
+
+El repositorio contiene también **Crónicas de Valdoria**, un segundo RPG creado desde cero dentro de `heroe2/`.
+
+- Es independiente del juego educativo principal.
+- Es una base de RPG normal estilo Zelda.
+- Usa texto sencillo en español A1, pero todavía no incorpora ejercicios educativos.
+- Usa spritesheets CC0 reales de Kenney: RPG Base, Tiny Town, Tiny Dungeon y Roguelike RPG Pack.
+- Tiene mundo amplio con cámara, villa, río, bosque, cripta, NPC, tienda, tres cristales, jefe, inventario, mapa y guardado local.
+- Su entrada es `heroe2/index.html`.
+- Su lógica está en `heroe2/game.js`.
+- Su documentación específica está en `heroe2/README.md`.
+- No comparte estado, assets ni claves de guardado con el juego principal.
+
+La preferencia de arte procedural indicada en este documento se aplica al juego educativo principal. `heroe2/` fue solicitado expresamente como experimento separado basado en assets PNG.
